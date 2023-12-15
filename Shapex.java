@@ -15,10 +15,18 @@ public class Shapex implements Shape
   
   public double getArea()
   {
-    
-  }
-  public double getPerimeter()
-  {
+          double apothem = this.sideLength/(2*Math.tan(180/this.sides));
+          return (sides * sideLength * apothem)/2;
+        //number of sides × length of one side × apothem)/2, 
+        //By definition, all sides of a regular polygon are equal in length. 
+        //If you know the length of one of the sides, 
+        //the apothem length is given by the formula:
+        //  apothem=s /(2 tan 180/n)
+ 	 
+  
+ 	
+    }
+  public double getPerimeter(){
     return this.sideLength * this.sides;
   }
 
